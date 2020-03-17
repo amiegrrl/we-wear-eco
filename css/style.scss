@@ -153,6 +153,11 @@ footer {
 	}
 }
 
+.gap {
+	@extend .col-md-6;
+	@extend .col-lg-4;
+}
+
 article {
 	@extend .col-md-6;
 	@extend .col-lg-4;
@@ -271,4 +276,6 @@ article {
 
 .grid {
 	overflow:hidden;
+	align-content: flex-start;
+    justify-content: space-between;
 }
