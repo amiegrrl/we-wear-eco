@@ -25,20 +25,42 @@
           </div>
 
           <div class="list-group">
-            <a href="#" class="list-group-item active" data-filter="all">All Brands</a>
-            <a href="#" class="list-group-item" data-filter=".fair-trade">Fair Trade</a>
-            <a href="#" class="list-group-item" data-filter=".organic">Organic</a>
-            <a class="list-group-item">100% Vegan</a>
-            <a class="list-group-item">Recycled</a>
-            <a class="list-group-item">Kids</a>
-            <a href="#" class="list-group-item" data-filter=".accessories">Accessories</a>
-            <a href="#" class="list-group-item basics" data-filter=".basics">Basics</a>
-            <a class="list-group-item">Price: $</a>
-            <a class="list-group-item">Activewear</a>
-            <a class="list-group-item">Secondhand</a>
-            <a class="list-group-item">Made in the U.S.</a>
-            <a class="list-group-item">Made in Canada</a>
-            <a href="#" class="list-group-item" data-filter=".social-good">Social Good</a>
+
+              
+              <a class="sidebarCollapse collapsed" href="#sidebar-cats" data-toggle="collapse" aria-expanded="true" aria-controls="sidebar-cats" data-filter="all">Filter</a>
+
+              <div class="collapse" id="sidebar-cats">
+
+                <a href="#" class="list-group-item active" data-filter="all">All Brands</a>
+                <a href="#" class="list-group-item" data-filter=".fair-trade">Fair Trade</a>
+                <a href="#" class="list-group-item" data-filter=".organic">Organic</a>
+                <a class="list-group-item">100% Vegan</a>
+                <a class="list-group-item">Recycled</a>
+                <a class="list-group-item">Kids</a>
+                <a href="#" class="list-group-item" data-filter=".accessories">Accessories</a>
+                <a href="#" class="list-group-item basics" data-filter=".basics">Basics</a>
+                <a class="list-group-item">Price: $</a>
+                <a class="list-group-item">Activewear</a>
+                <a class="list-group-item">Secondhand</a>
+                <a class="list-group-item">Made in the U.S.</a>
+                <a class="list-group-item">Made in Canada</a>
+                <a href="#" class="list-group-item" data-filter=".social-good">Social Good</a>
+
+              </div>
+              
+
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Submit</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Share</a>
+                </li>
+              </ul>
+            
 
           </div>
         </div>
@@ -47,6 +69,8 @@
         <div class="col-md main-content">
           <div class="main-content-inner">
            <h1><span>We Wear Eco</span> is a directory of eco & sustainable clothing and accessory brands.</h1>
+
+           <div class="parallax bg-ele-1"></div>
 
            <div class="row grid">
 
@@ -143,7 +167,10 @@
     <!-- /.container -->
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  <!--    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
     <script src="mixitup.min.js"></script>
@@ -160,6 +187,32 @@
         //   var filterValue = $(this).attr('data-filter');
         //   $grid.isotope({ filter: filterValue, });
         // });
+
+  
+
+        $('.main-content').on('scroll', function() {
+            var st = $(this).scrollTop();
+            $('h1').css({
+                'opacity' : 1 - st/100
+            });
+        });
+
+        //mobile fade out
+
+    
+
+        $(window).scroll(function() {
+              var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+              if (scrollTop < 50) {
+                    $('h1').fadeIn('slow');
+              }
+              else {
+                    $('h1').fadeOut('slow');
+              }
+        });
+
+   
+
 
         $(function(){
           $('body').on('click', '.list-group-item', function(){
