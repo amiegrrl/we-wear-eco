@@ -3475,14 +3475,24 @@ article {
   transform-origin: 0 50%;
   -webkit-transform: translateZ(3px) scale(0.625);
   transform: translateZ(3px) scale(0.625);
-  top: 50%;
-  right: 50%; }
-  .parallax:after {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '\219C';
-    position: absolute;
-    font-size: 70px;
-    z-index: 0; }
+  z-index: 0; }
+  .parallax.bg-ele-1 {
+    top: 6%;
+    left: 1%; }
+  .parallax.bg-ele-2 {
+    top: 12%;
+    left: 40%; }
+  .parallax.bg-ele-3 {
+    top: 60%;
+    left: -3%; }
+  .parallax.bg-ele-4 {
+    top: 80%;
+    left: 30%; }
+  .parallax.bg-ele-5 {
+    top: 120%;
+    left: 20%; }
+  .parallax.bg-ele-1--about {
+    top: 45%;
+    left: 25%;
+    -webkit-transform: translateZ(3px) scale(0.625) rotate(-40deg);
+    transform: translateZ(3px) scale(0.625) rotate(-40deg); }

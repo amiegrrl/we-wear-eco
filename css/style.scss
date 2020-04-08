@@ -511,21 +511,38 @@ article {
 	position:absolute;
 	transform-origin: 0 50%;
 	transform: translateZ(3px) scale(0.625);
+	z-index: 0;
+	
 
-	top:50%;
-	right:50%;
+	&.bg-ele-1 {
+	  top:6%;
+	  left:1%;	
+	}
 
-	&:after {
-	  top: 0;
-	  right: 0;
-	  bottom: 0;
-	  left: 0;
+	&.bg-ele-2 {
+		top:12%;
+		left:40%;
+	}
 
-	  content:'\219C';
-	  position:absolute;
-	  font-size:70px;
+	&.bg-ele-3 {
+		top:60%;
+		left:-3%;
+	}
 
-	  z-index: 0;
+	&.bg-ele-4 {
+		top:80%;
+		left:30%;
+	}
+
+	&.bg-ele-5 {
+		top:120%;
+		left:20%;
+	}
+
+	&.bg-ele-1--about {
+		top:45%;
+		left:25%;
+		transform: translateZ(3px) scale(0.625) rotate(-40deg);
 	}
 }
 
