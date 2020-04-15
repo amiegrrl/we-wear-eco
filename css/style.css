@@ -3122,6 +3122,13 @@ h2 {
     h2 {
       font-size: 2.2vw; } }
 
+.text-sm, article span, footer span {
+  text-transform: uppercase;
+  color: #b38d83;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  font-size: 14px; }
+
 .container-row {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -3308,11 +3315,6 @@ article {
     margin-bottom: -34px;
     padding-bottom: 44px; }
   article span {
-    text-transform: uppercase;
-    color: #b38d83;
-    font-family: 'Archivo', sans-serif;
-    font-weight: bold;
-    font-size: 14px;
     margin-top: auto; }
   article .favicon {
     position: absolute;
@@ -3496,3 +3498,49 @@ article {
     left: 25%;
     -webkit-transform: translateZ(3px) scale(0.625) rotate(-40deg);
     transform: translateZ(3px) scale(0.625) rotate(-40deg); }
+
+@media (min-width: 960px) {
+  footer p {
+    padding-top: 15px; } }
+
+footer .col-auto {
+  text-align: center; }
+
+.updated-date {
+  font-family: 'Archivo Black';
+  color: #38563e;
+  font-size: 16px;
+  display: block; }
+
+.subpage form {
+  border: 3px solid #b38d83;
+  border-radius: 0 30px 30px 0;
+  margin-left: -53px;
+  padding: 30px 50px;
+  padding-bottom: 0; }
+
+.subpage form select, .subpage form input, .subpage form textarea {
+  display: block;
+  width: 100%;
+  font-family: 'Judson', serif;
+  background: #f9ebe1;
+  border: none;
+  border-bottom: 3px solid #b38d83;
+  padding: 10px;
+  color: #38563e; }
+
+.subpage form label {
+  width: 100%;
+  font-family: 'Archivo Black', sans-serif; }
+
+.subpage form button {
+  background: #38563e;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  letter-spacing: .10em;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #f9ebe1;
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 10px; }

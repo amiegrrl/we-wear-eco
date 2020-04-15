@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>We Wear Eco</title>
+  </head>
+  <body>
+  
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+      <div class="row container-row">
+
+        <div class="col-md main-sidebar">
+
+          <div class="img-wrapper">
+            <img src="img/weweareco.png" width="212">
+          </div>
+
+          <div class="list-group">
+               <a href="index.html" class="list-group-item list-group-item--back">Back</a>
+          </div>
+
+          
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Submit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Share</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-md main-content">
+          <div class="main-content-inner subpage">
+           <h1>Submit to We Wear Eco</h1>
+
+           <div class="row">
+
+
+            <div class="col-sm-9">
+         
+
+              <h2>Fill out the form to submit your company or leave a suggestion.</h2>
+              <p>
+              Please note that each brand featured must be largely sustainable, fitting into one or more eco standard.
+              </p>
+
+              <form name="submit" method="POST" data-netlify="true">
+                <p>
+                  <label>Are you the owner or leaving a suggestion? <select name="role[]" multiple>
+                    <option value="leader">I'm the owner</option>
+                    <option value="follower">I'm leaving a suggestion</option>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Name of Brand: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Why are they awesome? <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+
+            </div>
+ 
+
+
+           </div>
+
+
+   
+        </div>
+
+
+          
+
+
+
+            <!-- Footer -->
+            <footer class="py-5">
+              <div class="container">
+                <p class="m-0">Designed, built, and maintained by Amie Colosa. Copyright &copy; 2020</p>
+              </div>
+              <!-- /.container -->
+            </footer>
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <!--    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+    <script src="mixitup.min.js"></script>
+
+     <script>
+      $( document ).ready(function() {
+        // var $grid = $('.grid').isotope({
+        //   itemSelector: 'article',
+        //   resizable: false, // disable normal resizing
+        //   // layoutMode: 'fitRows',
+        // });
+
+        // $('.list-group').on( 'click', 'a', function() {
+        //   var filterValue = $(this).attr('data-filter');
+        //   $grid.isotope({ filter: filterValue, });
+        // });
+
+  
+
+        $('.main-content').on('scroll', function() {
+            var st = $(this).scrollTop();
+            $('h1').css({
+                'opacity' : 1 - st/100
+            });
+        });
+
+        //mobile fade out
+
+    
+
+        $(window).scroll(function() {
+              var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+              if (scrollTop < 50) {
+                    $('h1').fadeIn('slow');
+              }
+              else {
+                    $('h1').fadeOut('slow');
+              }
+        });
+
+   
+
+
+        $(function(){
+          $('body').on('click', '.list-group-item', function(){
+            $('.list-group-item').removeClass('active');
+            $(this).closest('.list-group-item').addClass('active');
+          });
+        });
+    
+            var containerEl = document.querySelector('.grid');
+
+            var mixer = mixitup(containerEl, {
+                animation: {
+                    animateResizeTargets: true
+                }
+            });
+
+    
+        });
+    </script>
+
+  </body>
+</html>
