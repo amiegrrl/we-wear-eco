@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>We Wear Eco</title>
+  </head>
+  <body>
+  
+
+    <!-- Page Content -->
+    <div class="container-fluid">
+
+      <div class="row container-row">
+
+        <div class="col-md main-sidebar">
+
+          <div class="img-wrapper">
+            <img src="img/weweareco.png" width="212">
+          </div>
+
+          <div class="list-group">
+
+              
+              <a class="sidebarCollapse collapsed" href="#sidebar-cats" data-toggle="collapse" aria-expanded="true" aria-controls="sidebar-cats" data-filter="all">Filter</a>
+
+              <div class="collapse" id="sidebar-cats">
+
+                <a href="#" class="list-group-item active" data-filter="all">All Brands</a>
+                <a href="#" class="list-group-item" data-filter=".fair-trade">Fair Trade</a>
+                <a href="#" class="list-group-item" data-filter=".organic">Organic</a>
+                <a class="list-group-item">100% Vegan</a>
+                <a class="list-group-item">Recycled</a>
+                <a class="list-group-item">Kids</a>
+                <a href="#" class="list-group-item" data-filter=".accessories">Accessories</a>
+                <a href="#" class="list-group-item basics" data-filter=".basics">Basics</a>
+                <a class="list-group-item">Price: $</a>
+                <a class="list-group-item">Activewear</a>
+                <a class="list-group-item">Secondhand</a>
+                <a class="list-group-item">Made in the U.S.</a>
+                <a class="list-group-item">Made in Canada</a>
+                <a href="#" class="list-group-item" data-filter=".social-good">Social Good</a>
+
+              </div>
+              
+
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Submit</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Share</a>
+                </li>
+              </ul>
+            
+
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-md main-content">
+          <div class="main-content-inner">
+           <h1><span>We Wear Eco</span> is a directory of eco & sustainable clothing and accessory brands.</h1>
+
+           <div class="parallax bg-ele-1">
+             <img src="img/leaf.png" width="150">
+           </div>
+
+           <div class="parallax bg-ele-2">
+             <img src="img/shirt.png" width="300">
+           </div>
+
+           <div class="parallax bg-ele-3">
+             <img src="img/cotton.png" width="200">
+           </div>
+
+           <div class="parallax bg-ele-4">
+             <img src="img/sun.png" width="250">
+           </div>
+
+           <div class="parallax bg-ele-5">
+             <img src="img/tag.png" width="206">
+           </div>
+
+           <div class="row grid">
+
+             <article class="mix">
+              <div class="favicon">
+                <img src="http://www.google.com/s2/favicons?domain=alternativeapparel.com">
+              </div>
+              <div class="article-inner">
+                <h2>Alternative Apparel</h2>
+                <p>Fashion basics for a sustainable future. Men and women's apparel basics in soft eco-fabrics, organic and pima.</p>
+                <span class="tags">#Basics</span>
+              </div>
+              <a href="#">Visit site</a>
+             </article>
+
+             <article class="mix basics social-good">
+              <div class="favicon">
+                <img src="http://www.google.com/s2/favicons?domain=tentree.com">
+              </div>
+              <div class="article-inner">
+                <h2>Tentree</h2>
+                <p>Tentree is a environmentally progressive, lifestyle apparel brand that plants ten trees for every item purchased.</p>
+                <span class="tags">#Basics #Socialgood</span>
+              </div>
+              <a href="#">Visit site</a>
+             </article>
+
+             <article class="mix basics organic fair-trade">
+              <div class="favicon">
+                <img src="http://www.google.com/s2/favicons?domain=wearpact.com">
+              </div>
+              <div class="article-inner">
+                <h2>Pact</h2>
+                <p>We are designed for humankind, creating head-to-toe basics that empower every kind of person to unleash what's underneath.</p>
+                <span class="tags">#Organic #Basics #Fairtrade</span>
+              </div>
+              <a href="#">Visit site</a>
+             </article>
+
+            <article class="mix basics">
+              <div class="favicon">
+                <img src="http://www.google.com/s2/favicons?domain=everlane.com">
+              </div>
+              <div class="article-inner">
+                <h2>Everlane</h2>
+                <p>Exceptional quality. Ethical factories. Radical Transparency.</p>
+                <span class="tags">#Basics</span>
+              </div>
+              <a href="#">Visit site</a>
+             </article>
+
+             <article class="mix basics accessories fair-trade">
+              <div class="favicon">
+                <img src="http://www.google.com/s2/favicons?domain=livefashionable.com">
+              </div>
+              <div class="article-inner">
+                <h2>Able</h2>
+                <p>Challenging the culture of the fashion industry by creating transformative opportunities for women.</p>
+                <span class="tags">#Basics #Accessories #Fairtrade</span>
+              </div>
+              <a href="#">Visit site</a>
+             </article>
+
+             {% for site in site.sites %}
+                <article class="mix {% for tag in site.tags %} {{ tag }} {% endfor %}">
+                  <div class="favicon">
+                    <img src="https://www.google.com/s2/favicons?domain={{ site.link }}">
+                  </div>
+                  <div class="article-inner">
+                    <h2>{{ site.title }}</h2>
+                    <p>{{ site.content | markdownify }}</p>
+                    <span class="tags">
+                      {% for tag in site.tags %}
+                        #{{ tag }} 
+                      {% endfor %}
+                    </span>
+                  </div>
+                  <a href="https://{{ site.link }}">Visit site</a>
+                </article>
+            {% endfor %}
+
+             <div class="gap"></div>
+             <div class="gap"></div>
+
+
+           </div>
+
+
+   
+        </div>
+
+
+          
+
+
+
+            <!-- Footer -->
+            <footer class="py-5">
+              <div class="container">
+                <p class="m-0">Designed, built, and maintained by Amie Colosa. Copyright &copy; 2020</p>
+              </div>
+              <!-- /.container -->
+            </footer>
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <!--    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
+    <script src="mixitup.min.js"></script>
+
+     <script>
+      $( document ).ready(function() {
+        // var $grid = $('.grid').isotope({
+        //   itemSelector: 'article',
+        //   resizable: false, // disable normal resizing
+        //   // layoutMode: 'fitRows',
+        // });
+
+        // $('.list-group').on( 'click', 'a', function() {
+        //   var filterValue = $(this).attr('data-filter');
+        //   $grid.isotope({ filter: filterValue, });
+        // });
+
+  
+
+        $('.main-content').on('scroll', function() {
+            var st = $(this).scrollTop();
+            $('h1').css({
+                'opacity' : 1 - st/100
+            });
+        });
+
+        //mobile fade out
+
+    
+
+        $(window).scroll(function() {
+              var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+              if (scrollTop < 50) {
+                    $('h1').fadeIn('slow');
+              }
+              else {
+                    $('h1').fadeOut('slow');
+              }
+        });
+
+   
+
+
+        $(function(){
+          $('body').on('click', '.list-group-item', function(){
+            $('.list-group-item').removeClass('active');
+            $(this).closest('.list-group-item').addClass('active');
+          });
+        });
+    
+            var containerEl = document.querySelector('.grid');
+
+            var mixer = mixitup(containerEl, {
+                animation: {
+                    animateResizeTargets: true
+                }
+            });
+
+    
+        });
+    </script>
+
+  </body>
+</html>
