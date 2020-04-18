@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+media_folder: "images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+
+# when using the default proxy server port
+local_backend: true
+
+collections:
+  - name: "sites"
+    label: "Sites"
+    folder: "_sites/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      #- {label: "Tags", name: "tags", widget: "list"}
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        searchFields: ["title", "link"]
+        valueField: "title"
+        displayFields: ["title"]
+        multiple: true
+      - {label: "Description", name: "body", widget: "markdown"}
+
+  - name: "tags"
+    label: "Tags"
+    folder: "_tags/"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "link", widget: "string", required: false}
+
+  - label: "Tag Menu"
+    name: "tagMenu"
+    files:
+    - file: "_data/tagMenu.yml"
+      label: "Tag Meu"
+      name: "tagMenu"
+      fields:
+        - label: "Menu Items"
+          name: "menuItems"
+          widget: "list"
+          fields: 
+            - label: "Menu Item"
+              name: "menuItem"
+              widget: "relation"
+              collection: "tags"
+              searchFields: ["title", "link"]
+              valueField: "title"
+              displayFields: ["title"]
