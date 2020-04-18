@@ -1,4 +1,4 @@
 ---
 title: some tag
-link: tag
+tag: override
 ---

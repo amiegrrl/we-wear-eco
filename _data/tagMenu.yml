@@ -1,5 +1,3 @@
 menuItems:
-  - undefined: some tag
-    menuItem: some tag
-  - undefined: tag
-    menuItem: tag
+  - menuItem: tag
+  - menuItem: some tag
