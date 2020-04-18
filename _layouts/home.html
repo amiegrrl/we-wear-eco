@@ -23,6 +23,15 @@
               <div class="collapse" id="sidebar-cats">
 
                 <a href="#" class="list-group-item active" data-filter="all">All Brands</a>
+                {% assign menuItems = site.data.tagMenu.menuItems %}
+                {% for item in menuItems %}
+                  {% assign itemTitle = item.menuItem %}
+                  {% assign tagObject = site.tags | where:"title", itemTitle %}
+                  {% if tagObject != empty  %}
+                  <a href="#" class="list-group-item" data-filter="{{ itemTitle | slugify | prepend: '.' }}">{{ itemTitle }}</a>
+                  {% endif %}
+                {% endfor %}
+
                 <a href="#" class="list-group-item" data-filter=".fair-trade">Fair Trade</a>
                 <a href="#" class="list-group-item" data-filter=".organic">Organic</a>
                 <a class="list-group-item">100% Vegan</a>
@@ -133,21 +142,32 @@
               <a href="#">Visit site</a>
              </article>
 
-             {% for site in site.sites %}
-                <article class="mix {% for tag in site.tags %} {{ tag | slugify }} {% endfor %}">
+             {% for brand in site.brands %}
+                <article class="mix {% for tagTitle in brand.tags %} {{ tagTitle | slugify }}{% endfor %}">
                   <div class="favicon">
-                    <img src="https://www.google.com/s2/favicons?domain={{ site.link }}">
+                    <img src="https://www.google.com/s2/favicons?domain={{ brand.link }}">
                   </div>
                   <div class="article-inner">
-                    <h2>{{ site.title }}</h2>
-                    <p>{{ site.content | markdownify }}</p>
+                    <h2>{{ brand.title }}</h2>
+                    <p>{{ brand.content | markdownify }}</p>
                     <span class="tags">
-                      {% for tag in site.tags %}
-                        #{{ tag | slugify | remove: '-'}} 
+                      {% for tagTitle in brand.tags %}
+                        {% assign tagObject = site.tags | where:"title", tagTitle %}
+                        {% if tagObject != empty  %}
+
+                          {% assign tag = tagTitle | slugify | remove: '-' %}
+                          
+                          {% if tagObject.first.tag %}
+                            {% assign tag = tagObject.first.tag %}
+                          {% endif %}
+
+                          #{{ tag }}
+
+                      {% endif %}
                       {% endfor %}
                     </span>
                   </div>
-                  <a href="https://{{ site.link }}">Visit site</a>
+                  <a href="//{{ brand.link }}">Visit site</a>
                 </article>
             {% endfor %}
 

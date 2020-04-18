@@ -8,14 +8,14 @@ public_folder: "/images" # The src attribute for uploaded media will begin with 
 local_backend: true
 
 collections:
-  - name: "sites"
-    label: "Sites"
-    folder: "_sites/"
+  - name: "brands"
+    label: "Brands"
+    folder: "_brands/"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Link", name: "link", hint: "Enter link without protocol (http://, https://)", widget: "string"}
       #- {label: "Tags", name: "tags", widget: "list"}
       - label: "Tags"
         name: "tags"
@@ -34,7 +34,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Link", name: "link", widget: "string", required: false}
+      - {label: "Tag", name: "tag", widget: "string", required: false}
 
   - label: "Tag Menu"
     name: "tagMenu"
@@ -51,6 +51,6 @@ collections:
               name: "menuItem"
               widget: "relation"
               collection: "tags"
-              searchFields: ["title", "link"]
+              searchFields: ["title", "tag"]
               valueField: "title"
               displayFields: ["title"]
