@@ -36,6 +36,7 @@ plugins:
 
 collections:
     sites:
+    tags:
 
 sass:
   sass_dir: css
