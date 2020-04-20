@@ -28,7 +28,7 @@
                   {% assign itemTitle = item.menuItem %}
                   {% assign tagObject = site.tags | where:"title", itemTitle %}
                   {% if tagObject != empty  %}
-                  <a href="#" class="list-group-item" data-filter="{{ itemTitle | slugify | prepend: '.' }}">{{ itemTitle }}</a>
+                  <a href="#" class="list-group-item" data-filter="{{ itemTitle | slugify | prepend: '.filter-' }}">{{ itemTitle }}</a>
                   {% endif %}
                 {% endfor %}
 
@@ -69,7 +69,7 @@
            <div class="row grid">
 
              {% for brand in site.brands %}
-                <article class="mix {% for tagTitle in brand.tags %} {{ tagTitle | slugify }}{% endfor %}">
+                <article class="mix {% for tagTitle in brand.tags %} {{ tagTitle | slugify | prepend: 'filter-' }}{% endfor %}">
                   <div class="favicon">
                     <img src="https://www.google.com/s2/favicons?domain={{ brand.link }}">
                   </div>
