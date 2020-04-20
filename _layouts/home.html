@@ -32,20 +32,6 @@
                   {% endif %}
                 {% endfor %}
 
-                <a href="#" class="list-group-item" data-filter=".fair-trade">Fair Trade</a>
-                <a href="#" class="list-group-item" data-filter=".organic">Organic</a>
-                <a class="list-group-item">100% Vegan</a>
-                <a class="list-group-item">Recycled</a>
-                <a class="list-group-item">Kids</a>
-                <a href="#" class="list-group-item" data-filter=".accessories">Accessories</a>
-                <a href="#" class="list-group-item basics" data-filter=".basics">Basics</a>
-                <a class="list-group-item">Price: $</a>
-                <a class="list-group-item">Activewear</a>
-                <a class="list-group-item">Secondhand</a>
-                <a class="list-group-item">Made in the U.S.</a>
-                <a class="list-group-item">Made in Canada</a>
-                <a href="#" class="list-group-item" data-filter=".social-good">Social Good</a>
-
               </div>
               
 
@@ -82,66 +68,6 @@
 
            <div class="row grid">
 
-             <article class="mix">
-              <div class="favicon">
-                <img src="http://www.google.com/s2/favicons?domain=alternativeapparel.com">
-              </div>
-              <div class="article-inner">
-                <h2>Alternative Apparel</h2>
-                <p>Fashion basics for a sustainable future. Men and women's apparel basics in soft eco-fabrics, organic and pima.</p>
-                <span class="tags">#Basics</span>
-              </div>
-              <a href="#">Visit site</a>
-             </article>
-
-             <article class="mix basics social-good">
-              <div class="favicon">
-                <img src="http://www.google.com/s2/favicons?domain=tentree.com">
-              </div>
-              <div class="article-inner">
-                <h2>Tentree</h2>
-                <p>Tentree is a environmentally progressive, lifestyle apparel brand that plants ten trees for every item purchased.</p>
-                <span class="tags">#Basics #Socialgood</span>
-              </div>
-              <a href="#">Visit site</a>
-             </article>
-
-             <article class="mix basics organic fair-trade">
-              <div class="favicon">
-                <img src="http://www.google.com/s2/favicons?domain=wearpact.com">
-              </div>
-              <div class="article-inner">
-                <h2>Pact</h2>
-                <p>We are designed for humankind, creating head-to-toe basics that empower every kind of person to unleash what's underneath.</p>
-                <span class="tags">#Organic #Basics #Fairtrade</span>
-              </div>
-              <a href="#">Visit site</a>
-             </article>
-
-            <article class="mix basics">
-              <div class="favicon">
-                <img src="http://www.google.com/s2/favicons?domain=everlane.com">
-              </div>
-              <div class="article-inner">
-                <h2>Everlane</h2>
-                <p>Exceptional quality. Ethical factories. Radical Transparency.</p>
-                <span class="tags">#Basics</span>
-              </div>
-              <a href="#">Visit site</a>
-             </article>
-
-             <article class="mix basics accessories fair-trade">
-              <div class="favicon">
-                <img src="http://www.google.com/s2/favicons?domain=livefashionable.com">
-              </div>
-              <div class="article-inner">
-                <h2>Able</h2>
-                <p>Challenging the culture of the fashion industry by creating transformative opportunities for women.</p>
-                <span class="tags">#Basics #Accessories #Fairtrade</span>
-              </div>
-              <a href="#">Visit site</a>
-             </article>
-
              {% for brand in site.brands %}
                 <article class="mix {% for tagTitle in brand.tags %} {{ tagTitle | slugify }}{% endfor %}">
                   <div class="favicon">
@@ -149,7 +75,7 @@
                   </div>
                   <div class="article-inner">
                     <h2>{{ brand.title }}</h2>
-                    <p>{{ brand.content | markdownify }}</p>
+                    {{ brand.content | markdownify }}
                     <span class="tags">
                       {% for tagTitle in brand.tags %}
                         {% assign tagObject = site.tags | where:"title", tagTitle %}

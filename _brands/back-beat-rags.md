@@ -2,6 +2,9 @@
 title: Back Beat Rags
 link: backbeat.co
 tags:
-  - some tag
+  - Made in USA
+  - Organic
+  - Basics
+  - Recycled
 ---
-Hemp and Organic Cotton Clothing Made Ethically in Los Angeles. Dress Easy, Live Easy!
+California lifestyle brand featuring easy, wearable hemp and organic cotton clothing.
