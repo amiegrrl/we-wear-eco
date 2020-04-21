@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: amiegrrl/we-wear-eco # Path to your GitHub repository
   branch: master # Branch to update (optional; defaults to master)
-media_folder: "images" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
 
 # when using the default proxy server port
 local_backend: true
@@ -13,10 +14,12 @@ collections:
     folder: "_brands/"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", hint: "Enter link without protocol (http://, https://)", widget: "string"}
-      #- {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Icon", name: "icon", widget: "image", allow_multiple: false, required: false}
       - label: "Tags"
         name: "tags"
         widget: "relation"
@@ -32,12 +35,16 @@ collections:
     folder: "_tags/"
     create: true
     slug: "{{slug}}"
+    editor:
+      preview: false
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Tag", name: "tag", widget: "string", required: false}
 
   - label: "Tag Menu"
     name: "tagMenu"
+    editor:
+        preview: false
     files:
     - file: "_data/tagMenu.yml"
       label: "Tag Meu"
