@@ -1,0 +1,24 @@
+{% assign author = 'amiegrrl' %}
+{% assign title = page.title | default: 'We Wear Eco sustainable clothing directory' %}
+{% capture tweet_by %} by @{{ author }}{% endcapture %}
+{% assign share_url = site.url | append: page.url | url_encode %}
+
+<a class='{% if include.text_label %}share-btn{% endif %} share-btn-twitter'
+   rel="noopener"
+    href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ title | append: tweet_by | url_encode }}{{ tweet_hashtags_output }}">
+  <i class="fa fa-twitter"></i>
+  {% if include.text_label %}Tweet{% endif %}
+</a>
+<a class="{% if include.text_label %}share-btn{% endif %} share-btn-facebook"
+   rel="noopener"
+   href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}&title={{ title | url_encode }}">
+  <i class="fa fa-facebook"></i>
+  {% if include.text_label %}Share{% endif %}
+
+</a>
+<a class="{% if include.text_label %}share-btn{% endif %} share-btn-linkedin"
+   rel="noopener"
+   href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ title | url_encode }}">
+  <i class="fa fa-linkedin"></i>
+  {% if include.text_label %}Share{% endif %}
+</a>
