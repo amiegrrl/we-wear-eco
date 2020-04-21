@@ -1,6 +1,7 @@
 ---
 title: Cole and Cleo
 link: coleandcleo.com
+icon: /img/favicon-16x16.png
 tags:
   - Organic
   - Kids

@@ -1,6 +1,7 @@
 ---
 title: Opia
 link: opia.com.au
+icon: /img/favicon-16x16.png
 tags:
   - 100% Vegan
 ---
