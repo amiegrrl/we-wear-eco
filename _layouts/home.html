@@ -71,13 +71,13 @@
              {% for brand in site.brands %}
                 <article class="mix {% for tagTitle in brand.tags %} {{ tagTitle | slugify | prepend: 'filter-' }}{% endfor %}">
                   <div class="favicon">
-                    {% assign iconUrl = "https://www.google.com/s2/favicons?domain=" | append: brand.link %}
+                    {% assign iconUrl = "https://www.google.com/s2/favicons?domain=https://" | append: brand.link %}
                     
                     {% unless brand.icon == empty or brand.icon == nil  %}
                       {% assign iconUrl = brand.icon %}
                     {% endunless %}
 
-                    <img src="//{{ iconUrl }}">
+                    <img src="{{ iconUrl }}">
                   </div>
                   <div class="article-inner">
                     <h2>{{ brand.title }}</h2>
