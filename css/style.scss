@@ -25,6 +25,16 @@ p, span {
 
 p {
 	line-height:1.3;
+
+	a {
+		color: $green;
+		text-decoration:underline;
+
+		&:hover {
+			color: $green;
+			opacity:.5;
+		}
+	}
 }
 
 h1, h2 {
