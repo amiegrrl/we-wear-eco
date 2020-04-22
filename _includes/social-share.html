@@ -5,12 +5,14 @@
 
 <a class='{% if include.text_label %}share-btn{% endif %} share-btn-twitter'
    rel="noopener"
+   target="_blank"
     href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ title | append: tweet_by | url_encode }}{{ tweet_hashtags_output }}">
   <i class="fa fa-twitter"></i>
   {% if include.text_label %}Tweet{% endif %}
 </a>
 <a class="{% if include.text_label %}share-btn{% endif %} share-btn-facebook"
    rel="noopener"
+   target="_blank"
    href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}&title={{ title | url_encode }}">
   <i class="fa fa-facebook"></i>
   {% if include.text_label %}Share{% endif %}
@@ -18,6 +20,7 @@
 </a>
 <a class="{% if include.text_label %}share-btn{% endif %} share-btn-linkedin"
    rel="noopener"
+   target="_blank"
    href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ title | url_encode }}">
   <i class="fa fa-linkedin"></i>
   {% if include.text_label %}Share{% endif %}
