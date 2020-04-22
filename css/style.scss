@@ -678,5 +678,9 @@ footer .col-auto {
     	color: $green;
     	padding-left:15px;
     	padding-right:15px;
+
+    	&:hover {
+			text-decoration:none;
+    	}
     }
 }
