@@ -92,7 +92,7 @@ h2 {
 	border-left:3px solid $neutral;
 	border-top:3px solid $neutral;
 	margin-top:-3px;
-	overflow-x:hidden;
+	overflow:hidden;
 	// flex: 0 0 76%;
  //    max-width: 76%;
     padding:0;
@@ -103,6 +103,8 @@ h2 {
     @media (min-width: $screen-sm) {
 		margin-left:0;
 		width:auto;
+		overflow:auto;
+		overflow-x:hidden;
     }
 }
 
