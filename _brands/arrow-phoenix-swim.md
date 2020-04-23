@@ -1,5 +1,5 @@
 ---
-title: Arrow + Phoenix Swim
+title: Arrow + Phoenix
 link: arrowandphoenix.com
 tags:
   - Made in USA
