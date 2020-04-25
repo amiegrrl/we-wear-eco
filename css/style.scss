@@ -88,9 +88,10 @@ h2 {
 
 .main-content {
 	background: $tan;
-	border-radius:30px 0 0 0;
-	border-left:3px solid $neutral;
-	border-top:3px solid $neutral;
+	border-radius:30px 0 0 0; 
+	border:3px solid $neutral
+	border-right:0;
+	border:bottom:0;
 	// overflow:hidden;
     padding:0;
 
