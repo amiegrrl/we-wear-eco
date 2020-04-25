@@ -93,7 +93,7 @@ h2 {
 	margin: 0 -3px -3px -3px;
 	overflow:hidden;
     padding:0;
-    width:103%;
+    width: calc(100% + 6px);
 
     @media (min-width: $screen-sm) {
 		margin-left:0;
