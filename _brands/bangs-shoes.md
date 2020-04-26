@@ -1,5 +1,5 @@
 ---
-title: Bangs Shoes
+title: BANGS Shoes
 link: bangsshoes.com
 tags:
   - Social Good

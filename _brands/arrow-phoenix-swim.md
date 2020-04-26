@@ -5,5 +5,6 @@ tags:
   - Made in USA
   - Recycled
   - Accessories
+  - 100% Vegan
 ---
 Bikinis designed by a babe from the bayou created from recycled water bottles.
