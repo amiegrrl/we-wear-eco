@@ -1,6 +1,6 @@
 ---
 title: Herbivore Clothing
-link: herbivoreclothing.com
+link: www.herbivoreclothing.com
 tags:
   - 100% Vegan
   - Accessories

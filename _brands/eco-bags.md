@@ -1,6 +1,6 @@
 ---
 title: Eco-bags
-link: ecobags.com
+link: www.ecobags.com
 tags:
   - Accessories
   - Organic

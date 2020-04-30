@@ -1,6 +1,6 @@
 ---
 title: Dedicated
-link: dedicatedbrand.com
+link: www.dedicatedbrand.com
 tags:
   - Organic
   - Recycled
