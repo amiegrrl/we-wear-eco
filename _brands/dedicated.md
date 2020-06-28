@@ -7,4 +7,5 @@ tags:
   - Fair Trade
   - Kids
 ---
-Streetwear clothing brand from Sweden Dedicated to creativity & sustainability.
+Planet-friendly collection since 2006. For Men/Women/Kids. Dedicated to creativity & sustainability.
+Based in Stockholm, Sweden. Worldwide shipping.
