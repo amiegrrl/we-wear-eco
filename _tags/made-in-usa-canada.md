@@ -1,3 +1,3 @@
 ---
-title: Made in USA
+title: Made Locally
 ---
