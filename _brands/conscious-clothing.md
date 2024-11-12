@@ -3,7 +3,7 @@ title: "Conscious Clothing "
 link: consciousclothing.net
 tags:
   - 100% Vegan
-  - Made in USA
+  - Made Locally
   - Organic
   - Accessories
 ---

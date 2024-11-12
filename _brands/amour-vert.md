@@ -5,6 +5,6 @@ tags:
   - Organic
   - Recycled
   - Accessories
-  - Made in USA
+  - Made Locally
 ---
 Classic french-inspired staples made sustainably in San Francisco. Plants a tree for every tee purchased.

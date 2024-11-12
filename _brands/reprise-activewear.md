@@ -3,6 +3,6 @@ title: Reprise Activewear
 link: repriseactivewear.com
 tags:
   - Activewear
-  - Made in USA
+  - Made Locally
 ---
 Plant-based activewear for a cleaner workout.

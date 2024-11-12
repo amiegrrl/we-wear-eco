@@ -3,7 +3,7 @@ title: "Yoga Democracy "
 link: yogademocracy.com
 tags:
   - Activewear
-  - Made in USA
+  - Made Locally
   - Recycled
   - Organic
   - Kids

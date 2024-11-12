@@ -2,7 +2,7 @@
 title: Arrow + Phoenix
 link: arrowandphoenix.com
 tags:
-  - Made in USA
+  - Made Locally
   - Recycled
   - Accessories
   - 100% Vegan

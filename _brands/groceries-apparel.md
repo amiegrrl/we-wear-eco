@@ -2,7 +2,7 @@
 title: Groceries Apparel
 link: groceriesapparel.com
 tags:
-  - Made in USA
+  - Made Locally
   - Organic
   - Recycled
 ---
